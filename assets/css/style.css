@@ -81,12 +81,28 @@ img {
 }
 
 .login__register, .login__create{
+  position: absolute;
+  bottom: 1rem;
   width: 100%;
   background-color: var(--first-color-lighten);
   padding: 2rem 1rem;
   border-radius: 1rem;
   text-align: center;
   box-shadow: 0 8px 20px rgba(35,0,77,.2);
+  animation-duration: .4s;
+  animation-name: animate-login;
+}
+
+@keyframes animate-login{
+  0%{
+    transform: scale(1,1);
+  }
+  50%{
+    transform: scale(1.1,1.1);
+  }
+  100%{
+    transform: scale(1,1);
+  }
 }
 
 .login__tittle{
@@ -143,4 +159,43 @@ img {
   text-align: center;
   border-radius: .5rem;
   transition: .3s;
+}
+
+.login__button:hover{
+  background-color: var(--first-color-dark);
+}
+
+.login__account, .login__signin, .login__signup{
+  font-weight: 600;
+  font-size: var(--small-font-size);
+}
+
+.login__account{
+  color: var(--first-color-dark);
+}
+
+.login__signin, .login__signup{
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.login__social{
+  margin-top: 2rem;
+}
+
+.login__social-icon{
+  font-size: 1.5rem;
+  color: var(--first-color-dark);
+  margin: 0 1.5rem;
+}
+
+
+/* show login */
+.block{
+  display: block;
+}
+
+/* hidden login */
+.none{
+  display: none;
 }
